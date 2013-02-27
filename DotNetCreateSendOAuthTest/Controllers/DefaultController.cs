@@ -14,7 +14,6 @@ namespace DotNetCreateSendOAuthTest.Controllers
         {
             var authorizeUrl = General.AuthorizeUrl(
                 int.Parse(ConfigurationManager.AppSettings.Get("CREATESEND_CLIENT_ID")),
-                ConfigurationManager.AppSettings.Get("CREATESEND_CLIENT_SECRET"),
                 ConfigurationManager.AppSettings.Get("CREATESEND_REDIRECT_URI"),
                 "ViewReports,CreateCampaigns,SendCampaigns");
             return Redirect(authorizeUrl);
